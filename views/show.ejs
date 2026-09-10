@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post In Detail</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="page-shell single-column">
+    <section class="detail-card">
+      <a class="back-link" href="/posts">Back to all posts</a>
+      <p class="eyebrow">Post Detail</p>
+      <h1>@<%= post.username %></h1>
+      <p class="detail-id">Post id: <%= post.id %></p>
+
+      <article class="post-card detail-post">
+        <p class="content"><%= post.content %></p>
+      </article>
+
+      <div class="actions">
+        <a class="button button-secondary" href="/posts/<%= post.id %>/edit">Edit Post</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

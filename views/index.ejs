@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Posts</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero">
+      <p class="eyebrow">Community Feed</p>
+      <h1>Quora Posts</h1>
+      <p class="hero-copy">Read quick thoughts, celebrate wins, and share what you are building today.</p>
+      <a class="button button-primary" href="/posts/new">Create a Post</a>
+    </section>
+
+    <section class="posts-grid">
+      <% for (let post of posts) { %>
+        <article class="post-card">
+          <div class="post-card-header">
+            <p class="username">@<%= post.username %></p>
+          </div>
+
+          <p class="content"><%= post.content %></p>
+
+          <div class="actions">
+            <a class="button button-secondary" href="/posts/<%= post.id %>">View</a>
+            <a class="button button-secondary" href="/posts/<%= post.id %>/edit">Edit</a>
+            <form method="post" action="/posts/<%= post.id %>?_method=DELETE">
+              <button class="button button-danger" type="submit">Delete</button>
+            </form>
+          </div>
+        </article>
+      <% } %>
+    </section>
+  </main>
+</body>
+</html>

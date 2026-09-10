@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create New Post</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="page-shell single-column">
+    <section class="form-card">
+      <a class="back-link" href="/posts">Back to all posts</a>
+      <p class="eyebrow">New Post</p>
+      <h1>Share something with the community</h1>
+
+      <form class="post-form" method="POST" action="/posts">
+        <label for="username">Username</label>
+        <input id="username" name="username" placeholder="Enter username" required>
+
+        <label for="content">Content</label>
+        <textarea id="content" name="content" placeholder="Write your post" rows="7" required></textarea>
+
+        <button class="button button-primary" type="submit">Publish Post</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
